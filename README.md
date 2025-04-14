@@ -1,4 +1,3 @@
-# fnOS
 
 admin@Dell-E7250:~$ cat /etc/os-release
 PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
