@@ -3,6 +3,7 @@
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 修改为
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash hugepagesz=1G hugepages=3 default_hugepagesz=1G"
-使用命令更新配置生效
+使用命令更新配置生效，重启系统后，配置生效，已正常开启1GB大内存
 sudo update-grub
-重启系统后，配置生效，已正常开启1GB大内存
+sudo reboot
+
