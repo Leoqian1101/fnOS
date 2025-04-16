@@ -1,0 +1,5 @@
+以 root 或使用 sudo 打开 /etc/default/grub：
+找到
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+修改为
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash hugepagesz=1G hugepages=3 default_hugepagesz=1G"
