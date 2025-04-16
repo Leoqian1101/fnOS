@@ -26,3 +26,9 @@ User=hw
 
 [Install]
 WantedBy=multi-user.target
+
+
+重新加载 systemd 配置并启用服务：​
+sudo systemctl daemon-reexec
+sudo systemctl enable xmrig.service
+sudo systemctl start xmrig.service
