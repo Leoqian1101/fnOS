@@ -7,3 +7,22 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash hugepagesz=1G hugepages=3 default_hugep
 sudo update-grub
 sudo reboot
 
+设置开机自动运行 XMRig
+您可以通过创建 systemd 服务来实现 XMRig 的开机自启动：​
+    创建服务文件：
+sudo nano /etc/systemd/system/xmrig.service
+
+在文件中添加以下内容：​
+
+[Unit]
+Description=XMRig Miner
+After=network.target
+
+[Service]
+ExecStart=/home/hw/xmrig-6.22.2/xmrig
+WorkingDirectory=/home/hw/xmrig-6.22.2
+Restart=always
+User=hw
+
+[Install]
+WantedBy=multi-user.target
